@@ -1,0 +1,46 @@
+// theme colors
+
+$primary: #dfdfde !default;
+$secondary: #3a3845 !default;
+$cta: #f56d91 !default;
+$error: #d32752 !default;
+$info: #f6c31c !default;
+
+// color palette
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "cta": $cta,
+  "error": $error,
+  "info": $info,
+  "blue": blue,
+  "cyan": cyan,
+  "red": #e61919,
+  "yellow": #e6e619,
+  "green": green,
+  "orange": #ffa600,
+  "purple": #9900ff,
+  "gray": #808080,
+  "black": black,
+  "white": white,
+) !default;
+
+$accordionWidth: 200px;
+
+// spacing
+$base-padding: 0.75rem !default;
+$base-margin: 0.75rem !default;
+
+// borders
+$base-border-thickness: 1px !default;
+$base-border-radius: 20px !default;
+
+// box-shadow
+$base-box-shadow: 1px 3px 5px hsla(305, 73%, 83%, 0.5) !default;
+
+// font sizes
+$base-font-size: 1rem !default;
+$font-size-sm: $base-font-size * 0.75 !default;
+$font-size-lg: $base-font-size * 1.5 !default;
+$font-size-xl: $base-font-size * 2 !default;
+$font-size-xxl: $base-font-size * 3 !default;

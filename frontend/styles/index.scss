@@ -1,0 +1,20 @@
+// variables & functions
+@import "abstracts/variables";
+
+// base & layout
+@import "abstracts/base";
+@import "abstracts/breakpoints";
+@import "abstracts/grid";
+
+// colors
+@import "abstracts/colors";
+
+// components (button, card, navbar etc)
+@import "components/button";
+@import "components/inputbox";
+
+//Pages
+@import "pages/home";
+
+// utilities (margin, padding, opacity, etc)
+@import "abstracts/utilities";

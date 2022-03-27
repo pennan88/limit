@@ -1,0 +1,37 @@
+@use "sass:math";
+
+.inputbox {
+  border: 1px black solid;
+  height: 280px;
+  width: 250px;
+  border-radius: $base-border-radius / 2;
+  background-color: $secondary;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+
+    input {
+      border-radius: $base-border-radius / 2;
+      border: 0;
+      width: 200px;
+      height: 25px;
+      text-align: center;
+    }
+  }
+  &__buttons {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+}
