@@ -11,7 +11,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Image src={brand} />
       </div>
 
-      <Component {...pageProps} />
+      <div className="page-wrapper">
+        <Component {...pageProps} />
+      </div>
     </div>
   );
 }

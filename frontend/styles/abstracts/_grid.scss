@@ -1,4 +1,5 @@
 @use "sass:math";
+
 $grid-columns: 12;
 $grid-gaps: (
   "0": 0,
@@ -8,7 +9,9 @@ $grid-gaps: (
   "4": 40px,
   "5": 50px,
 );
-$layout-values: flex-start, flex-end, center, space-between, space-around;
+$justify-content: flex-start, flex-end, center, space-between, space-around;
+$align-items: baseline, center, flex-end, flex-start, stretch;
+$flex-direction: column, row;
 
 .container {
   width: 100%;
@@ -35,9 +38,21 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 }
 
 // justify content classes
-@each $val in $layout-values {
+@each $val in $justify-content {
   .justify-#{$val} {
     justify-content: $val;
+  }
+}
+
+@each $val in $align-items {
+  .align-#{$val} {
+    align-items: $val;
+  }
+}
+
+@each $val in $flex-direction {
+  .flex-#{$val} {
+    flex-direction: $val;
   }
 }
 

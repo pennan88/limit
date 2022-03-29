@@ -1,11 +1,13 @@
+@use "sass:math";
+
 @mixin btn($bg-color: tan) {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
   border: 0;
-  padding: $base-padding / 2 $base-padding * 2;
+  padding: math.div($base-padding, 2) $base-padding * 2;
   background-color: $bg-color;
-  border-radius: $base-border-radius / 2;
+  border-radius: math.div($base-border-radius, 2);
   transition: 0.2s ease all;
   letter-spacing: 1.3px;
 }

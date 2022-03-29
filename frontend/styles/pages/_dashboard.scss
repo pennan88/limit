@@ -1,0 +1,50 @@
+.dashboard {
+  width: 90%;
+  height: 100%;
+
+  .tabs {
+    div {
+      border: 1px $cta solid;
+      color: white;
+      padding: 0.2em 0.5em;
+      font-size: 13px;
+    }
+
+    .active {
+      background-color: $cta;
+    }
+  }
+
+  .chart {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+
+    .title {
+      align-self: flex-start;
+    }
+    &__table {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    &__table-middle {
+      ul {
+        width: 100%;
+        li {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+      .green {
+        color: green;
+      }
+      .red {
+        color: red;
+      }
+    }
+  }
+}

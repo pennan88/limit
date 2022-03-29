@@ -26,6 +26,7 @@ li {
 .site-wrapper {
   background-color: $primary;
   min-height: 100vh;
+  height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -35,5 +36,15 @@ li {
   .brand {
     display: flex;
     justify-self: flex-start !important;
+    top: 3rem;
+    height: 20%;
+  }
+
+  .page-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
