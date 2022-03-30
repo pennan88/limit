@@ -1,0 +1,10 @@
+query getExpenses {
+  expenses {
+    data {
+      attributes {
+        Name
+        Amount
+      }
+    }
+  }
+}

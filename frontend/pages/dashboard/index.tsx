@@ -1,7 +1,21 @@
+import {
+  ExpenseEntity,
+  ExpenseEntityResponseCollection,
+  InvoiceEntity,
+  InvoiceEntityResponseCollection,
+} from "generated/graphql";
+import { initializeApollo } from "lib/apollo";
+import { GetStaticProps } from "next";
 import React, { useState } from "react";
+import { queryAllExpenses, queryAllInvoices } from "shared/utils/queries";
 import Chart from "../../Components/Statisticschart";
 
-const Dashboard = () => {
+interface DashboardProps {
+  invoice: InvoiceEntityResponseCollection;
+  expense: ExpenseEntityResponseCollection;
+}
+
+const Dashboard = ({ invoice, expense }: DashboardProps) => {
   const [active, setActive] = useState(false);
 
   const handleClass = () => {
@@ -21,27 +35,27 @@ const Dashboard = () => {
         <div>Add Expense</div>
         <div>Previous budget</div>
       </div>
-      <Chart
-        className="chart p-1"
-        title={"INCOME"}
-        content={"LÖN"}
-        amount={35000}
-      />
-
-      <Chart
-        className="chart p-1"
-        title={"EXPENSES"}
-        content={"LÖN"}
-        amount={-35000}
-      />
-      <Chart
-        className="chart p-1"
-        title={"SAVINGS"}
-        content={"LÖN"}
-        amount={35000}
-      />
+      <Chart variant="invoice" props={{ invoice }} className={"chart p-1"} />
+      <Chart variant="expense" props={{ expense }} className="chart p-1" />
     </div>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const client = initializeApollo();
+  const invoiceData = await queryAllInvoices({
+    client: client,
+  });
+  const expenseData = await queryAllExpenses({
+    client: client,
+  });
+
+  return {
+    props: {
+      invoice: invoiceData,
+      expense: expenseData,
+    },
+  };
 };
 
 export default Dashboard;

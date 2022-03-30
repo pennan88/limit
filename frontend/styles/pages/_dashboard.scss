@@ -7,7 +7,9 @@
       border: 1px $cta solid;
       color: white;
       padding: 0.2em 0.5em;
-      font-size: 13px;
+      font-size: 12px;
+      word-break: break-all;
+      overflow-x: hidden;
     }
 
     .active {
@@ -39,12 +41,13 @@
           justify-content: space-between;
         }
       }
-      .green {
-        color: green;
-      }
-      .red {
-        color: red;
-      }
+    }
+    letter-spacing: 1.5px;
+    .green {
+      color: green;
+    }
+    .red {
+      color: rgb(255, 60, 0);
     }
   }
 }

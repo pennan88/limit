@@ -1,0 +1,10 @@
+query getInvoices {
+  invoices {
+    data {
+      attributes {
+        Name
+        Amount
+      }
+    }
+  }
+}
